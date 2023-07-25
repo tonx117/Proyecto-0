@@ -37,6 +37,8 @@ app.set("view engine", "ejs");
 
 // Views Routes
 app.use("/", require("./routes/usuario.routes"));
+
+app.use("/", require("./routes/index.routes"));
 // Api Routes
 app.use("/api", require("./api/routes/usuario.routes"));
 

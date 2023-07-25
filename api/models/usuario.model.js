@@ -14,6 +14,18 @@ const usuario = sequelize.define(
       type: DataTypes.STRING(100),
       allowNull: false,
     },
+    apellido: {
+      type: DataTypes.STRING(100),
+      allowNull: false,
+    },
+    numerotelefono: {
+      type: DataTypes.STRING(100),
+      allowNull: true,
+      unique: {
+        args: true,
+        msg: "El numero ya existe",
+      },
+    },
     correo: {
       type: DataTypes.STRING(100),
       allowNull: false,

@@ -42,11 +42,13 @@ usuarioctrl.show = async (req, res) => {
 
 // Crear una reserva
 usuarioctrl.store = async (req, res) => {
-  const { nombre, correo, contraseña } = req.body;
+  const { nombre, apellido, numerotelefono, correo, contraseña } = req.body; // Asegúrate de tener el campo "apellido" en la solicitud
 
   try {
     const Usuario = await usuario.create({
       nombre,
+      apellido,
+      numerotelefono,
       correo,
       contraseña,
     });
@@ -54,7 +56,7 @@ usuarioctrl.store = async (req, res) => {
     if (!Usuario) {
       throw {
         status: 400,
-        message: "No se pudo crear la reserva.",
+        message: "No se pudo crear el usuario.",
       };
     }
 
@@ -68,11 +70,13 @@ usuarioctrl.store = async (req, res) => {
 // Actualizar una reserva
 usuarioctrl.update = async (req, res) => {
   const UsuarioId = req.params.id;
-  const { nombre, correo, contraseña } = req.body;
+  const { nombre, apellido, numerotelefono, correo, contraseña } = req.body;
   try {
     const Usuario = await usuario.findByPk(UsuarioId);
     await Usuario.update({
       nombre,
+      apellido,
+      numerotelefono,
       correo,
       contraseña,
     });

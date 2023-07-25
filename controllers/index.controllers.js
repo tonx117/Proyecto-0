@@ -1,17 +1,42 @@
-const ctrlReservas = require("../controllers/reserva.controllers");
+const acercadeview = (req, res) => {
+  res.render("acercade.ejs");
+};
 
-const router = require("express").Router();
+const checklistview = (req, res) => {
+  res.render("checklist.ejs");
+};
 
-// ==========================================
-//         Rutas para renderizar vistas
-// ==========================================
+const contactoview = (req, res) => {
+  res.render("contacto.ejs");
+};
 
-// Obtener todas las reservas
-router.get("/", ctrlReservas.indexView);
-// Formulario para crear una reserva
-router.get("/reservas/create", ctrlReservas.createView);
+const cuentaview = (req, res) => {
+  res.render("cuenta.ejs");
+};
 
-// Formulario para actualizar una reserva
-router.get("/reservas/:id/edit", ctrlReservas.editView);
+const herramientasview = (req, res) => {
+  res.render("herramientas.ejs");
+};
 
-module.exports = router;
+const loginview = (req, res) => {
+  res.render("login.ejs");
+};
+
+const registerview = (req, res) => {
+  res.render("register");
+};
+
+const serviciosview = (req, res) => {
+  res.render("servicios");
+};
+
+module.exports = {
+  acercadeview,
+  checklistview,
+  contactoview,
+  cuentaview,
+  herramientasview,
+  loginview,
+  registerview,
+  serviciosview,
+};
