@@ -32,11 +32,12 @@
         <h2 class="main__title">Bienvenido!</h2>
         <p class="main__paragraph">Porfavor ingrese los datos a continuacion</p>
 
-        <form class="main__form">
+        <form class="main__form" id="formregister">
           <input
             type="text"
             placeholder="Ingrese su nombre"
             class="main__input"
+            id="nombreregistro"
             required
           />
 
@@ -45,12 +46,14 @@
             placeholder="ingrese su apellido"
             class="main__input"
             required
+            id="apellidoregistro"
           />
 
           <input
             type="tel"
             placeholder="ingrese su numero de telefono"
             class="main__input"
+            id="telefonoregistro"
           />
 
           <input
@@ -58,6 +61,7 @@
             placeholder="ingrese su correo electronico"
             class="main__input"
             required
+            id="correoregistro"
           />
 
           <input
@@ -65,13 +69,7 @@
             placeholder="ingrese su contraseña"
             class="main__input"
             required
-          />
-
-          <input
-            type="password"
-            placeholder="confirme su contraseña"
-            class="main__input"
-            required
+            id="contraseñaregistro"
           />
 
           <input
@@ -100,5 +98,6 @@
         </article>
       </div>
     </section>
+    <script src="js/nuevo_usuario.js"></script>
   </body>
 </html>

@@ -31,7 +31,7 @@ const serviciosview = (req, res) => {
 };
 
 const proyectosview = (req, res) => {
-  res.render("servicios");
+  res.render("proyectos");
 };
 
 module.exports = {

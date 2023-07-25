@@ -1,58 +1,52 @@
-const formNuevoUsuario = document.querySelector('#formNuevoUsuario');
+const registerform = document.querySelector("#formregister");
 
-formNuevoUsuario.addEventListener('submit', async (e) => {
-    e.preventDefault();
+registerform.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    const username = document.querySelector('#username').value;
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
-    const confirmPassword = document.querySelector('#confirmPassword').value;
+  const nombre = document.querySelector("#nombreregistro").value;
+  const apellido = document.querySelector("#apellidoregistro").value;
+  const numerotelefono = document.querySelector(
+    "#numerotelefonoregistro"
+  ).value;
+  const correo = document.querySelector("#correoregistro").value;
+  const contraseña = document.querySelector("#contraseñaregistro").value;
 
-    if (password !== confirmPassword) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Las contraseñas no coinciden',
-        });
-        return;
-    }
+  const response = await fetch("http://localhost:4460/api/usuario ", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nombre,
+      apellido,
+      numerotelefono,
+      correo,
+      contraseña,
+    }),
+  });
 
-    const response = await fetch('http://localhost:4000/api/usuario', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            username,
-            email,
-            password,
-        }),
-    });
+  const data = await response.json();
 
-    const respToJson = await response.json();
-    
-    if(response.status !== 201 && response.status !== 200) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: respToJson.message,
-        });
-        return;
-    }
+  console.log(data);
 
+  if (response.status !== 201 && response.status !== 200) {
     Swal.fire({
-        icon: 'success',
-        title: 'Usuario creado',
-        text: respToJson.message,
+      icon: "error",
+      title: "Oops...",
+      text: "Algo salio mal!",
     });
+    return;
+  }
 
-    console.log(respToJson.message);
+  swal.fire({
+    icon: "success",
+    title: "Usuario creado correctamente",
+    text: "Usuario creado correctamente",
+  });
 
-    formNuevoUsuario.reset();
+  registerform.reset();
 
-    setTimeout(() => {
-        window.location.href = '/usuarios';
-    }, 2000);
-
+  setTimeout(() => {
+    window.location.href = "/";
+  }, 2000);
 });
-    
