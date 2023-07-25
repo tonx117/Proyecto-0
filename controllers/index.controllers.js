@@ -30,6 +30,10 @@ const serviciosview = (req, res) => {
   res.render("servicios");
 };
 
+const proyectosview = (req, res) => {
+  res.render("servicios");
+};
+
 module.exports = {
   acercadeview,
   checklistview,
@@ -39,4 +43,5 @@ module.exports = {
   loginview,
   registerview,
   serviciosview,
+  proyectosview,
 };

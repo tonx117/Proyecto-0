@@ -18,4 +18,6 @@ router.get("/login", index.loginview);
 
 router.get("/register", index.registerview);
 
+router.get("/proyectos", index.proyectosview);
+
 module.exports = router;
