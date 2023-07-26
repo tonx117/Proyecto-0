@@ -20,4 +20,14 @@ router.get("/register", index.registerview);
 
 router.get("/proyectos", index.proyectosview);
 
+router.get("/wiki", index.wikiview);
+
+router.get("/generales", index.generalesview);
+
+router.get("/electricidad", index.electricidadview);
+
+router.get("/carpinteria", index.carpinteriaview);
+
+router.get("/metalurgia", index.metalurgiaview);
+
 module.exports = router;

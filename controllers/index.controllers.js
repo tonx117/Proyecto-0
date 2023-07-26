@@ -34,10 +34,35 @@ const proyectosview = (req, res) => {
   res.render("proyectos");
 };
 
+const wikiview = (req, res) => {
+  res.render("wiki");
+};
+
+const generalesview = (req, res) => {
+  res.render("generales");
+};
+
+const metalurgiaview = (req, res) => {
+  res.render("metalurgia");
+};
+
+const electricidadview = (req, res) => {
+  res.render("electricidad");
+};
+
+const carpinteriaview = (req, res) => {
+  res.render("carpinteria");
+};
+
 module.exports = {
+  generalesview,
+  metalurgiaview,
+  electricidadview,
+  carpinteriaview,
   acercadeview,
   checklistview,
   contactoview,
+  wikiview,
   cuentaview,
   herramientasview,
   loginview,

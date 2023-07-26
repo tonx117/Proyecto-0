@@ -17,4 +17,6 @@ router.put("/usuario/:id", usuarioctrl.update);
 // Eliminar una reserva de forma lógica
 router.delete("/usuario/:id", usuarioctrl.destroy);
 
+router.post("/usuario/login", usuarioctrl.login);
+
 module.exports = router;

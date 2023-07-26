@@ -5,9 +5,7 @@ registerform.addEventListener("submit", async (e) => {
 
   const nombre = document.querySelector("#nombreregistro").value;
   const apellido = document.querySelector("#apellidoregistro").value;
-  const numerotelefono = document.querySelector(
-    "#numerotelefonoregistro"
-  ).value;
+  const numerotelefono = document.querySelector("#telefonoregistro").value;
   const correo = document.querySelector("#correoregistro").value;
   const contraseña = document.querySelector("#contraseñaregistro").value;
 

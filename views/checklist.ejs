@@ -18,10 +18,10 @@
   </head>
   <body>
     <!---==== HEADER ==== -->
-    <header class="container header">
+    <header class="container header" id="headercheck">
       <!--==== NAVBAR ==== -->
 
-      <nav class="nav">
+      <nav class="nav" >
         <div class="logo">
           <h2>Centinela</h2>
         </div>
@@ -31,18 +31,21 @@
           </button>
           <ul class="nav_menu_list">
             <li class="nav_menu_item">
-              <a href="./html/cuenta.html" class="nav_menu_link">cuenta</a>
+              <a href="/" class="nav_menu_link">inicio</a>
             </li>
             <li class="nav_menu_item">
-              <a href="./html/acercade.html" class="nav_menu_link">acerca de</a>
+              <a href="/cuenta" class="nav_menu_link">cuenta</a>
             </li>
             <li class="nav_menu_item">
-              <a href="./html/servicios.html" class="nav_menu_link"
+              <a href="/servicios" class="nav_menu_link"
                 >servicios</a
               >
             </li>
             <li class="nav_menu_item">
-              <a href="./html/contacto.html" class="nav_menu_link">contacto</a>
+              <a href="/contacto" class="nav_menu_link">contacto</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="/proyectos" class="nav_menu_link">proyectos</a>
             </li>
           </ul>
         </div>
@@ -156,19 +159,15 @@
           toman medidas para mitigarlos.</label
         ><br />
         <br />
-        <input type="submit" value="Enviar" />
-        <input type="button" value="Imprimir" />
+        <div id="botoncheck">
+          <input type="submit" value="Enviar" />
+          <input type="button" value="Imprimir" id="imprimirBtn"/>
+        </div>
       </form>
     </section>
 
     
     <footer></footer>
-
-    <!--==== ANIMATE ON SCROLL JS CDN -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!--==== GSAP CDN ==== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <!--==== SCRIPT.JS ==== -->
-    <script src="./js/main.js" defer></script>
+    <script src="js/checklist.imprimir.js"></script>
   </body>
 </html>

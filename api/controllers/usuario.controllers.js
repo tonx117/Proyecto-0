@@ -107,4 +107,29 @@ usuarioctrl.destroy = async (req, res) => {
   }
 };
 
+// login
+usuarioctrl.login = async (req, res) => {
+  const { correo, contraseña } = req.body;
+
+  try {
+    const Usuario = await usuario.findOne({
+      where: {
+        correo,
+        contraseña,
+      },
+    });
+
+    if (!Usuario) {
+      return res.status(400).json({
+        message: "Correo o contraseña incorrectos.",
+      });
+    }
+    res.json(Usuario);
+  } catch (error) {
+    return res.status(500).json({
+      message: error.message || "Error interno del servidor",
+    });
+  }
+};
+
 module.exports = usuarioctrl;
