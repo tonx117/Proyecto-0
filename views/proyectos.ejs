@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Leviatan System - Vigilancia y Monitoreo Mejorado con IA</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
-    <!--==== STYLE.CSS ==== -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!--==== REMIXICON CDN ==== -->
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <!--==== ANIMATE ON SCROLL CSS CDN ==== -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/prueba.css" />
   </head>
+
   <body>
-    <!---==== HEADER ==== -->
     <header class="container header">
       <!--==== NAVBAR ==== -->
-
+      <h1><%= %></h1>
       <nav class="nav">
         <div class="logo">
           <h2>Centinela</h2>
@@ -28,22 +34,21 @@
           <button class="close_btn" id="close_btn">
             <i class="ri-close-fill"></i>
           </button>
-
           <ul class="nav_menu_list">
-            <li class="nav_menu_item">
-              <a href="/" class="nav_menu_link">Inicio</a>
-            </li>
             <li class="nav_menu_item">
               <a href="/cuenta" class="nav_menu_link">cuenta</a>
             </li>
             <li class="nav_menu_item">
-              <a href="/acercade" class="nav_menu_link">acerca de</a>
+              <a href="/acercade" class="nav_menu_link">formularios</a>
             </li>
             <li class="nav_menu_item">
               <a href="/servicios" class="nav_menu_link">servicios</a>
             </li>
             <li class="nav_menu_item">
               <a href="/contacto" class="nav_menu_link">contacto</a>
+            </li>
+            <li class="nav_menu_item">
+              <a href="/proyectos" class="nav_menu_link">proyectos</a>
             </li>
           </ul>
         </div>
@@ -52,14 +57,278 @@
         </button>
       </nav>
     </header>
+    <!-- Breve introducción del proyecto -->
+    <section>
+      <h1 class="h12">Leviatan System</h1>
+      <p>
+        Bienvenido a Leviatan System, tecnologia desarralloda con el fin de
+        brindar soluciones de seguridad y vigilancia mejoradas con inteligencia
+        artificial. Nuestro compromiso es garantizar la protección y
+        tranquilidad en entornos académicos y laborales a través de tecnologías
+        avanzadas de visión artificial y redes neuronales. Supervisaremos y
+        registraremos las actividades en áreas clave, brindando una solución
+        integral para la seguridad de su campus.
+      </p>
+    </section>
+    <section>
+      <h2 class="h21">
+        Sistema de Seguridad Leviatan <i class="tooltip fas fa-info-circle"></i>
+      </h2>
+      <div class="tooltiptext" id="tooltip">
+        <i class="fas fa-quote-left"></i> El "Leviatán" es una obra filosófica
+        escrita por Thomas Hobbes en el siglo XVII. En ella, Hobbes expone su
+        teoría del contrato social y la naturaleza del poder político. Según
+        Hobbes, el estado natural del ser humano es caracterizado por la guerra
+        de todos contra todos, donde prevalece la competencia, la desconfianza y
+        la inseguridad. Para escapar de este estado de caos y asegurar la paz y
+        la seguridad, los individuos acuerdan ceder parte de su libertad y
+        someterse a un poder centralizado: el Leviatán. <br /><br />
+        El Leviatán, en este contexto, es una figura alegórica que representa al
+        Estado o gobierno central, investido con el poder absoluto para mantener
+        el orden, establecer leyes y proteger a la sociedad de los conflictos
+        internos. Es una entidad que posee una autoridad indiscutible y tiene
+        como objetivo principal salvaguardar la seguridad y el bienestar de sus
+        ciudadanos.
+        <br /><br />
+        A lo largo de la historia, el Leviatán ha sido representado en
+        diferentes formas y se ha convertido en un motivo recurrente en el arte
+        y la literatura. A menudo se le muestra como una serpiente marina
+        gigante o como un dragón marino. Su imagen ha sido utilizada como
+        metáfora de la lucha entre el orden y el caos, o entre las fuerzas
+        divinas y las fuerzas malignas. <i class="fas fa-quote-right"></i>
+      </div>
+    </section>
+    <h2 class="h21">
+      Conteo, Monitoreo y Clasificación de Accesos Utilizando Visión Artificial
+    </h2>
+    <!-- Sección de Demo -->
+    <!-- Sección de Demo -->
+    <section>
+      <h2 class="h21">Imágenes Demo</h2>
+      <!-- Slider de Imágenes Demo 1 -->
+      <div class="slider demo">
+        <!-- Tarjeta 1 -->
+        <div class="image-container">
+          <img src="images/demo/img1.jpg" alt="Imagen 1" />
+          <p>Alumnos del Instituto Politecnico</p>
+        </div>
 
-    <footer></footer>
+        <!-- Tarjeta 2 -->
+        <div class="image-container">
+          <img src="images/demo/img2.jpg" alt="Imagen 2" />
+          <p>Av.9 de Julio - Buenos Aires</p>
+        </div>
 
-    <!--==== ANIMATE ON SCROLL JS CDN -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!--==== GSAP CDN ==== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <!--==== SCRIPT.JS ==== -->
-    <script src="./js/main.js" defer></script>
+        <!-- Tarjeta 3 -->
+        <div class="image-container">
+          <img src="images/demo/img3.jpg" alt="Imagen 3" />
+          <p>Estacionamiento del Polo Cientifico</p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="image-container">
+          <img src="images/demo/img4.jpg" alt="Imagen 4" />
+          <p>Obreros en el Polo Cientifico</p>
+        </div>
+      </div>
+
+      <!-- Slider de Imágenes Demo 2 -->
+      <div class="slider demo">
+        <!-- Tarjeta 5 -->
+        <div class="image-container">
+          <img src="images/demo/img5.jpg" alt="Imagen 5" />
+          <p>Hombre hablando a grupo</p>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="image-container">
+          <img src="images/demo/img6.jpg" alt="Imagen 6" />
+          <p>Estacionamiento IPF</p>
+        </div>
+
+        <!-- Tarjeta 7 -->
+        <div class="image-container">
+          <img src="images/demo/img7.jpg" alt="Imagen 7" />
+          <p>Perro</p>
+        </div>
+
+        <!-- Tarjeta 8 -->
+        <div class="image-container">
+          <img src="images/demo/img8.jpg" alt="Imagen 8" />
+          <p>Grupo de personas mirando a Cámara</p>
+        </div>
+      </div>
+    </section>
+    <!-- Sección de Output -->
+    <section>
+      <h2 class="h21">Imágenes "Procesadas"</h2>
+      <!-- Slider de Imágenes Output 1 -->
+      <div class="slider output">
+        <!-- Tarjeta 1 -->
+        <div class="image-container">
+          <img src="images/output/img1.jpg" alt="Post-img1" />
+          <p>
+            480x640, 13 personas, 3 mochilas<br />
+            Tiempo de procesamiento: 178.1ms<br />
+            - Preprocesamiento: 9.0ms<br />
+            - Inferencia: 178.1ms<br />
+            - Postprocesamiento: 10.4ms<br />
+            Formato de la imagen: (1, 3, 480, 640)
+          </p>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="image-container">
+          <img src="images/output/img2.jpg" alt="Post-img2" />
+          <p>
+            416x640, 3 personas, 1 bicicleta, 14 autos, 1 semáforo, 1 mochila<br />
+            Tiempo de procesamiento: 135.5ms<br />
+            - Preprocesamiento: 4.0ms<br />
+            - Inferencia: 135.5ms<br />
+            - Postprocesamiento: 3.0ms<br />
+            Formato de la imagen: (1, 3, 416, 640)
+          </p>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="image-container">
+          <img src="images/output/img3.jpg" alt="Post-img3" />
+          <p>
+            320x640, 2 personas, 15 autos<br />
+            Tiempo de procesamiento: 124.6ms<br />
+            - Preprocesamiento: 3.0ms<br />
+            - Inferencia: 124.6ms<br />
+            - Postprocesamiento: 1.0ms<br />
+            Formato de la imagen: (1, 3, 320, 640)
+          </p>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="image-container">
+          <img src="images/output/img4.jpg" alt="Post-img4" />
+          <p>
+            480x640, 2 personas, 2 camiones<br />
+            Tiempo de procesamiento: 130.5ms<br />
+            - Preprocesamiento: 3.0ms<br />
+            - Inferencia: 130.5ms<br />
+            - Postprocesamiento: 2.0ms<br />
+            Formato de la imagen: (1, 3, 480, 640)
+          </p>
+        </div>
+      </div>
+
+      <!-- Slider de Imágenes Output 2 -->
+      <div class="slider output">
+        <!-- Tarjeta 5 -->
+        <div class="image-container">
+          <img src="images/output/img5.jpg" alt="Post-img5" />
+          <p>
+            416x640, 11 personas, 1 corbata<br />
+            Tiempo de procesamiento: 121.5ms<br />
+            - Preprocesamiento: 3.0ms<br />
+            - Inferencia: 121.5ms<br />
+            - Postprocesamiento: 1.0ms<br />
+            Formato de la imagen: (1, 3, 416, 640)
+          </p>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="image-container">
+          <img src="images/output/img6.jpg" alt="Post-img6" />
+          <p>
+            288x640, 7 personas, 2 autos, 1 camión<br />
+            Tiempo de procesamiento: 99.0ms<br />
+            - Preprocesamiento: 4.0ms<br />
+            - Inferencia: 99.0ms<br />
+            - Postprocesamiento: 1.0ms<br />
+            Formato de la imagen: (1, 3, 288, 640)
+          </p>
+        </div>
+
+        <!-- Tarjeta 7 -->
+        <div class="image-container">
+          <img src="images/output/img7.jpg" alt="Post-img7" />
+          <p>
+            384x640, 1 perro<br />
+            Tiempo de procesamiento: 160.0ms<br />
+            - Preprocesamiento: 2.0ms<br />
+            - Inferencia: 160.0ms<br />
+            - Postprocesamiento: 3.0ms<br />
+            Formato de la imagen: (1, 3, 384, 640)
+          </p>
+        </div>
+
+        <!-- Tarjeta 8 -->
+        <div class="image-container">
+          <img src="images/output/img8.jpg" alt="Post-img8" />
+          <p>
+            320x640, 17 personas, 1 auto, 1 bolso de mano<br />
+            Tiempo de procesamiento: 154.3ms<br />
+            - Preprocesamiento: 7.0ms<br />
+            - Inferencia: 154.3ms<br />
+            - Postprocesamiento: 2.0ms<br />
+            Formato de la imagen: (1, 3, 320, 640)
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Misión y servicios de Leviatan System -->
+    <section>
+      <h2 class="h21">Misión</h2>
+      <p>
+        La mision del modulo Leviatan System, es ser el "Guardián del Campus,"
+        brindando soluciones de seguridad avanzadas basadas en inteligencia
+        artificial. Nos esforzamos por garantizar la protección y el bienestar
+        de las personas en entornos académicos y laborales mediante tecnologías
+        de vanguardia, vigilancia inteligente y respuesta rápida ante
+        emergencias.
+      </p>
+    </section>
+    <section>
+      <h2 class="h21">Servicios</h2>
+      <ul>
+        <li>
+          Instalación de Cámaras de Seguridad: Implementamos sistemas de
+          vigilancia avanzados en áreas estratégicas para monitorear y registrar
+          actividades en tiempo real.
+        </li>
+        <li>
+          Inteligencia Artificial: Utilizamos algoritmos de visión artificial y
+          redes neuronales como TensorFlow, YOLOv8(Estado del arte) y Hugging
+          Face para una detección y clasificación precisa de eventos y
+          anomalías.
+        </li>
+        <li>
+          Monitoreo 24/7: Nuestro equipo de profesionales realiza un monitoreo
+          constante para detectar cualquier actividad sospechosa o incidente,
+          asegurando una respuesta rápida y adecuada.
+        </li>
+        <li>
+          Respuesta a Emergencias: Implementamos sistemas de alarmas y
+          protocolos de respuesta para actuar rápidamente ante incendios,
+          intrusiones o emergencias médicas.
+        </li>
+        <li>
+          Integración de Tecnologías: Ofrecemos soluciones personalizadas
+          integrando tecnologías de punta para adaptarnos a las necesidades
+          específicas de cada cliente.
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <!-- Firma del desarrollador -->
+    <div class="firma">
+      <p>
+        Proyecto Leviathan desarrollado por
+        <a href="https://github.com/FacundoMajda" target="_blank">
+          <i class="fab fa-github"></i>FacundoMajda
+        </a>
+      </p>
+    </div>
+    <!-- Scripts necesarios -->
+    <script src="js/proyecto.js"></script>
+    <script src="js/proyecto2.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/mouseover.js"></script>
   </body>
 </html>

@@ -1,0 +1,313 @@
+/* ==== "Inter" FONT-FAMILY FROM FONTS.GOOGLE.COM ==== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+/* ==== ROOT RESET ==== */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* ==== CSS VARIABLES ==== */
+:root {
+  --primary-color: #335eea;
+  --link-color: #506690;
+  --btn-hover-color: #2b50c7;
+  --lg-heading: #161c2d;
+  --text-content: #869ab8;
+  --fixed-header-height: 4.5rem;
+}
+/* ==== RESET HTML ==== */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafbfb;
+  line-height: 1.6;
+}
+
+section {
+  padding: 1rem;
+}
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ==== CONTAINER ==== */
+.container {
+  width: 100%;
+}
+@media screen and (min-width: 1040px) {
+  .container {
+    width: 1040px;
+    margin: 0 auto;
+  }
+}
+/* ==== HEADER ==== */
+.header {
+  height: var( - fixed-header-height);
+  padding: 0 1.7rem;
+}
+/* ==== NAV ==== */
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* ==== LOGO ==== */
+.logo h2 {
+  font-size: 28px;
+  color: var( - primary-color);
+}
+/* ==== NAV-MENU ==== */
+.nav_menu_list {
+  display: flex;
+  align-items: center;
+}
+.nav_menu_list .nav_menu_item {
+  margin: 0 2rem;
+}
+.nav_menu_item .nav_menu_link {
+  font-size: 16.5px;
+  line-height: 27px;
+  color: var( - link-color);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+.nav_menu_link:hover {
+  color: var( - primary-color);
+}
+.toggle_btn {
+  font-size: 20px;
+  font-weight: 600;
+  color: var( - lg-heading);
+  z-index: 4;
+}
+.nav_menu,
+.close_btn {
+  display: none;
+}
+.show {
+  right: 3% !important;
+}
+/* ==== MEDIA QURIES FOR RESPONSIVE DESIGN ==== */
+@media screen and (min-width: 768px) {
+  .toggle_btn {
+    display: none;
+  }
+  .nav_menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo h2 {
+    font-size: 23px;
+  }
+  .nav_menu {
+    position: fixed;
+    width: 93%;
+    height: 100%;
+    display: block;
+    top: 2.5%;
+    right: -100%;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1.5rem rgba(22, 28, 45, 0.1);
+    z-index: 50;
+    transition: 0.4s;
+  }
+  .nav_menu_list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 4rem;
+  }
+  .nav_menu_list .nav_menu_item {
+    margin: 1rem 0;
+  }
+  .nav_menu_item .nav_menu_link {
+    font-size: 18px;
+  }
+}
+
+/* ==== FOOTER ==== */
+
+.h12 {
+  font-size: 36px;
+  margin: 40px 20px 20px 40px;
+  color: #007bff;
+}
+.h21 {
+  font-size: 24px;
+  text-align: center;
+  margin: 50px 0;
+  color: #007bff;
+}
+
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  max-width: 100%;
+}
+
+.image-container h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 20px 0 10px 0;
+}
+
+.image-container p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0; /* Ajustar el margen del párrafo */
+  text-align: justify;
+}
+
+.image-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.location-icon {
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.location-icon i {
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Estilos para la firma */
+.firma {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.firma a {
+  color: #007bff;
+}
+
+.firma a:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.firma i {
+  margin-right: 5px;
+}
+
+/* Estilos para las secciones */
+section {
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+  width: 60%;
+}
+
+/* Posicionamiento del tooltip */
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Estilos para el tooltip */
+.tooltip .tooltiptext {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  width: auto; /* Ajustar el ancho automáticamente */
+  max-width: 120px; /* Ancho máximo del tooltip */
+  background-color: #0056b3;
+  color: #ffffff; /* Texto en color blanco */
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 10px;
+  font-style: italic; /* Texto en cursiva */
+  font-weight: bold; /* Texto en negrita */
+  pointer-events: none; /* Evita interacciones con el tooltip oculto */
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext i {
+  margin-right: 5px;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+
+/* Estilos específicos para las tarjetas de demo */
+.slider.demo {
+  justify-content: center; /* Centrar las tarjetas de demo en el contenedor */
+}
+
+/* Estilos para las tarjetas de demo */
+.slider.demo .image-container {
+  max-width: 200px; /* Ajustar el ancho máximo para las tarjetas de demo */
+  margin: 0 10px; /* Reducir el margen para las tarjetas de demo */
+}
+
+/* Estilos específicos para las tarjetas de output */
+.slider.output {
+  justify-content: center; /* Centrar las tarjetas de output en el contenedor */
+}
+
+/* Estilos para las tarjetas de output */
+.slider.output .image-container {
+  max-width: 300px; /* Ajustar el ancho máximo para las tarjetas de output */
+  margin: 0 20px; /* Reducir el margen para las tarjetas de output */
+}
+
+/* Estilos para el párrafo debajo de cada imagen de output */
+.slider.output .image-container p {
+  font-size: 14px; /* Tamaño de fuente ligeramente más pequeño */
+  margin: 10px 0; /* Espaciado del párrafo */
+}
