@@ -42,7 +42,7 @@ app.use("/", require("./routes/index.routes"));
 app.use("/api", require("./api/routes/usuario.routes"));
 
 
-app.use((req, res, next) => {
+app.use((_req, res, _next) => {
   res.status(404).send("Error 404");
 });
 

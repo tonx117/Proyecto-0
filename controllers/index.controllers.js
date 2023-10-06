@@ -1,56 +1,56 @@
-const acercadeview = (req, res) => {
+const acercadeview = (_req, res) => {
   res.render("acercade.ejs");
 };
 
-const checklistview = (req, res) => {
+const checklistview = (_req, res) => {
   res.render("checklist.ejs");
 };
 
-const contactoview = (req, res) => {
+const contactoview = (_req, res) => {
   res.render("contacto.ejs");
 };
 
-const cuentaview = (req, res) => {
+const cuentaview = (_req, res) => {
   res.render("cuenta.ejs");
 };
 
-const herramientasview = (req, res) => {
+const herramientasview = (_req, res) => {
   res.render("herramientas.ejs");
 };
 
-const loginview = (req, res) => {
+const loginview = (_req, res) => {
   res.render("login.ejs");
 };
 
-const registerview = (req, res) => {
+const registerview = (_req, res) => {
   res.render("register");
 };
 
-const serviciosview = (req, res) => {
+const serviciosview = (_req, res) => {
   res.render("servicios");
 };
 
-const proyectosview = (req, res) => {
+const proyectosview = (_req, res) => {
   res.render("proyectos");
 };
 
-const wikiview = (req, res) => {
+const wikiview = (_req, res) => {
   res.render("wiki");
 };
 
-const generalesview = (req, res) => {
+const generalesview = (_req, res) => {
   res.render("generales");
 };
 
-const metalurgiaview = (req, res) => {
+const metalurgiaview = (_req, res) => {
   res.render("metalurgia");
 };
 
-const electricidadview = (req, res) => {
+const electricidadview = (_req, res) => {
   res.render("electricidad");
 };
 
-const carpinteriaview = (req, res) => {
+const carpinteriaview = (_req, res) => {
   res.render("carpinteria");
 };
 
