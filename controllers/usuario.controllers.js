@@ -1,8 +1,6 @@
 const usuarioctrl = {};
 
-// ==========================================
-//         Rutas VISTAS de reservas
-// ==========================================
+
 usuarioctrl.indexView = (req, res) => {
   res.render("index.ejs");
 };
@@ -21,8 +19,6 @@ usuarioctrl.editView = (req, res) => {
   res.render("edit", { id: UsuarioId });
 };
 
-// ==========================================
-//         Rutas para CRUD de reservas
-// ==========================================
+
 
 module.exports = usuarioctrl;

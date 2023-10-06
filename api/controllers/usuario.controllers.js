@@ -1,4 +1,4 @@
-// Obtener todas las reservas
+
 const usuario = require("../models/usuario.model");
 const usuarioctrl = {};
 
@@ -18,7 +18,7 @@ usuarioctrl.index = async (_req, res) => {
     });
   }
 };
-// Obtener una reserva
+
 usuarioctrl.show = async (req, res) => {
   const UsuarioId = req.params.id;
 
@@ -28,7 +28,7 @@ usuarioctrl.show = async (req, res) => {
     if (!Usuario) {
       throw {
         status: 404,
-        message: "No existe la reserva con el id " + UsuarioId,
+        message: "No existe la cuenta con el id " + UsuarioId,
       };
     }
 
@@ -40,7 +40,7 @@ usuarioctrl.show = async (req, res) => {
   }
 };
 
-// Crear una reserva
+
 usuarioctrl.store = async (req, res) => {
   const { nombre, apellido, numerotelefono, correo, contraseña } = req.body; // Asegúrate de tener el campo "apellido" en la solicitud
 
@@ -67,7 +67,7 @@ usuarioctrl.store = async (req, res) => {
       .json(error.message || "Error interno del servidor");
   }
 };
-// Actualizar una reserva
+
 usuarioctrl.update = async (req, res) => {
   const UsuarioId = req.params.id;
   const { nombre, apellido, numerotelefono, correo, contraseña } = req.body;
@@ -87,7 +87,7 @@ usuarioctrl.update = async (req, res) => {
       .json(error.message || "Error interno del servidor");
   }
 };
-// Eliminar una reserva de forma lógica
+
 usuarioctrl.destroy = async (req, res) => {
   const UsuarioId = req.params.id;
 
