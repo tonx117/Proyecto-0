@@ -30,10 +30,6 @@ const serviciosview = (_req, res) => {
   res.render("servicios");
 };
 
-const proyectosview = (_req, res) => {
-  res.render("proyectos");
-};
-
 const wikiview = (_req, res) => {
   res.render("wiki");
 };
@@ -68,5 +64,4 @@ module.exports = {
   loginview,
   registerview,
   serviciosview,
-  proyectosview,
 };

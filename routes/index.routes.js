@@ -18,8 +18,6 @@ router.get("/login", index.loginview);
 
 router.get("/register", index.registerview);
 
-router.get("/proyectos", index.proyectosview);
-
 router.get("/wiki", index.wikiview);
 
 router.get("/generales", index.generalesview);
