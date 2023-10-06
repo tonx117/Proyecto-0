@@ -3,13 +3,13 @@ const { Sequelize, model, DataTypes } = require("sequelize");
 require("dotenv").config();
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME || "usuario",
-  process.env.DB_USER || "root",
-  process.env.DB_PASSWORD || "",
+  process.env.MYSQLDATABASE,
+  process.env.MYSQLUSER,
+  process.env.MYSQLPASSWORD,
   {
-    host: process.env.DB_HOST || "localhost",
-    dialect: process.env.DB_DIALECT || "mysql",
-    port: process.env.DB_PORT || 4460,
+    host: process.env.MYSQLHOST,
+    port: process.env.MYSQLPORT,
+    dialect: "mysql",
   }
 );
 
