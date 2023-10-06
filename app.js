@@ -24,7 +24,6 @@ sequelize
 require("ejs");
 
 // Middlewares
-// TODO: Implementar middlewares
 app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
@@ -42,8 +41,8 @@ app.use("/", require("./routes/index.routes"));
 // Api Routes
 app.use("/api", require("./api/routes/usuario.routes"));
 
-// TODO: Si la petición no coincide con ninguna de las rutas declaradas, mostrar error 404
-app.use((req, res, next) => {
+
+app.use((_req, res, _next) => {
   res.status(404).send("Error 404");
 });
 
