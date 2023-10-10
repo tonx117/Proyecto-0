@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centinela</title>
     <!--==== STYLE.CSS ==== -->
+    <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/checklist.css" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    />
     <!--==== REMIXICON CDN ==== -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
@@ -21,7 +28,7 @@
     <header class="container header" id="headercheck">
       <!--==== NAVBAR ==== -->
 
-      <nav class="nav" >
+      <nav class="nav">
         <div class="logo">
           <h2>Centinela</h2>
         </div>
@@ -37,9 +44,7 @@
               <a href="/cuenta" class="nav_menu_link">cuenta</a>
             </li>
             <li class="nav_menu_item">
-              <a href="/servicios" class="nav_menu_link"
-                >servicios</a
-              >
+              <a href="/servicios" class="nav_menu_link">servicios</a>
             </li>
             <li class="nav_menu_item">
               <a href="/contacto" class="nav_menu_link">contacto</a>
@@ -53,118 +58,131 @@
     </header>
 
     <!-- - ==== HERO ==== → -->
-    <section>
-      <br /><br />
-      <h1>Formulario De Seguridad Institucional</h1>
-      <br /><br />
-      <form>
+    <form>
+      <section>
+        <br /><br />
+        <h1>Formulario De Seguridad Institucional</h1>
+        <br /><br />
+
         <h2>Medidas de Seguridad</h2>
         <br /><br />
-    </section>
-    <section>
+      </section>
+      <section>
         <h3>Instalaciones Generales</h3>
         <label
-          ><input type="checkbox" /> Existen salidas de emergencia claramente
-          señalizadas.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Existen
+          salidas de emergencia claramente señalizadas.</label
         ><br />
         <label
-          ><input type="checkbox" /> Las salidas de emergencia están libres de
-          obstáculos.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Las salidas de
+          emergencia están libres de obstáculos.</label
         ><br />
         <label
-          ><input type="checkbox" /> Las puertas de emergencia abren fácilmente
-          y no están bloqueadas.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Las puertas de
+          emergencia abren fácilmente y no están bloqueadas.</label
         ><br />
         <label
-          ><input type="checkbox" /> Hay un sistema de alarma contra incendios
-          instalado y funcionando.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Hay un sistema
+          de alarma contra incendios instalado y funcionando.</label
         ><br />
         <label
-          ><input type="checkbox" /> Se realizan simulacros de evacuación
-          periódicamente.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Se realizan
+          simulacros de evacuación periódicamente.</label
         ><br />
         <h3>Prevención de Incendios</h3>
         <label
-          ><input type="checkbox" /> Hay extintores de incendios ubicados
-          estratégicamente.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Hay extintores
+          de incendios ubicados estratégicamente.</label
         ><br />
         <label
-          ><input type="checkbox" /> Los extintores están en buen estado y no
-          están vencidos.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Los extintores
+          están en buen estado y no están vencidos.</label
         ><br />
         <label
-          ><input type="checkbox" /> Existe un plan de respuesta ante incendios
-          y está actualizado.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Existe un plan
+          de respuesta ante incendios y está actualizado.</label
         ><br />
         <label
-          ><input type="checkbox" /> Los sistemas de detección de humo y alarma
-          contra incendios funcionan correctamente.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Los sistemas
+          de detección de humo y alarma contra incendios funcionan
+          correctamente.</label
         ><br />
         <label
-          ><input type="checkbox" /> Los enchufes y cables eléctricos están en
-          buen estado y no presentan riesgos de cortocircuitos.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Los enchufes y
+          cables eléctricos están en buen estado y no presentan riesgos de
+          cortocircuitos.</label
         ><br />
-    </section>
-    <section>
+      </section>
+      <section>
         <h3>Seguridad Física</h3>
         <label
-          ><input type="checkbox" /> Se cuenta con cámaras de seguridad en
-          lugares estratégicos.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Se cuenta con
+          cámaras de seguridad en lugares estratégicos.</label
         ><br />
         <label
-          ><input type="checkbox" /> Los accesos están controlados y se utilizan
-          tarjetas de identificación o sistemas de ingreso seguros.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Los accesos
+          están controlados y se utilizan tarjetas de identificación o sistemas
+          de ingreso seguros.</label
         ><br />
         <label
-          ><input type="checkbox" /> Se realizan revisiones periódicas de las
-          cerraduras y sistemas de seguridad.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Se realizan
+          revisiones periódicas de las cerraduras y sistemas de
+          seguridad.</label
         ><br />
         <label
-          ><input type="checkbox" /> Hay personal de seguridad capacitado y
-          disponible en caso de emergencia.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Hay personal
+          de seguridad capacitado y disponible en caso de emergencia.</label
         ><br />
         <label
-          ><input type="checkbox" /> Las áreas sensibles (como laboratorios o
-          salas de cómputo) están adecuadamente protegidas.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Las áreas
+          sensibles (como laboratorios o salas de cómputo) están adecuadamente
+          protegidas.</label
         ><br />
         <h3>Primeros Auxilios</h3>
         <label
-          ><input type="checkbox" /> Se dispone de un botiquín de primeros
-          auxilios bien equipado y accesible.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Se dispone de
+          un botiquín de primeros auxilios bien equipado y accesible.</label
         ><br />
         <label
-          ><input type="checkbox" /> Hay personal capacitado en primeros
-          auxilios y RCP.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Hay personal
+          capacitado en primeros auxilios y RCP.</label
         ><br />
         <label
-          ><input type="checkbox" /> Los profesores y personal están al tanto de
-          los procedimientos de primeros auxilios.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Los profesores
+          y personal están al tanto de los procedimientos de primeros
+          auxilios.</label
         ><br />
-    </section>
-    <section>
+      </section>
+      <section>
         <h3>Otros</h3>
         <label
-          ><input type="checkbox" /> Se realizan inspecciones regulares de
-          seguridad en las instalaciones.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Se realizan
+          inspecciones regulares de seguridad en las instalaciones.</label
         ><br />
         <label
-          ><input type="checkbox" /> Los equipos de cocina y calefacción están
-          en buen estado y cumplen con las normas de seguridad.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Los equipos de
+          cocina y calefacción están en buen estado y cumplen con las normas de
+          seguridad.</label
         ><br />
         <label
-          ><input type="checkbox" /> Se realizan evaluaciones de riesgos y se
-          toman medidas para mitigarlos.</label
+          ><input type="checkbox" class="mycheck" id="mycheck" /> Se realizan
+          evaluaciones de riesgos y se toman medidas para mitigarlos.</label
         ><br />
         <br />
         <div id="botoncheck">
           <input type="submit" value="Enviar" />
-          <input type="button" value="Imprimir" id="imprimirBtn"/>
+          <input type="button" value="Imprimir" id="imprimirBtn" />
         </div>
-      </form>
-    </section>
+      </section>
+    </form>
 
-    
     <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/checklist.imprimir.js"></script>
+    <script src="js/nav.js" defer></script>
   </body>
 </html>
