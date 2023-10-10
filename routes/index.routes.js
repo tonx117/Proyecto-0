@@ -1,31 +1,20 @@
-const index = require("../controllers/index.controllers");
+import express from "express";
+import * as indexController from "../controllers/index.controllers";
 
-const router = require("express").Router();
+const router = express.Router();
 
-router.get("/acercade", index.acercadeview);
+router.get("/acercade", indexController.acercadeview);
+router.get("/servicios", indexController.serviciosview);
+router.get("/cuenta", indexController.cuentaview);
+router.get("/herramientas", indexController.herramientasview);
+router.get("/checklist", indexController.checklistview);
+router.get("/contacto", indexController.contactoview);
+router.get("/login", indexController.loginview);
+router.get("/register", indexController.registerview);
+router.get("/wiki", indexController.wikiview);
+router.get("/generales", indexController.generalesview);
+router.get("/electricidad", indexController.electricidadview);
+router.get("/carpinteria", indexController.carpinteriaview);
+router.get("/metalurgia", indexController.metalurgiaview);
 
-router.get("/servicios", index.serviciosview);
-
-router.get("/cuenta", index.cuentaview);
-
-router.get("/herramientas", index.herramientasview);
-
-router.get("/checklist", index.checklistview);
-
-router.get("/contacto", index.contactoview);
-
-router.get("/login", index.loginview);
-
-router.get("/register", index.registerview);
-
-router.get("/wiki", index.wikiview);
-
-router.get("/generales", index.generalesview);
-
-router.get("/electricidad", index.electricidadview);
-
-router.get("/carpinteria", index.carpinteriaview);
-
-router.get("/metalurgia", index.metalurgiaview);
-
-module.exports = router;
+export default router;

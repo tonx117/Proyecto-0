@@ -1,15 +1,15 @@
 {
-  "name": "proyecto_desde_0",
+  "name": "proyecto_0",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
     "start": " node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Equipo Codex",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
