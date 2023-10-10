@@ -12,6 +12,7 @@ const port = process.env.PORT;
 
 const { sequelize } = require("./db");
 
+
 sequelize
   .authenticate()
   .then(() => {
