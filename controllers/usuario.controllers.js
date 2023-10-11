@@ -1,6 +1,6 @@
-const usuarioctrl = {};
+export const usuarioctrl = {};
 
-usuarioctrl.indexView = (req, res) => {
+usuarioctrl.indexView = (_req, res) => {
   res.render("index.ejs");
 };
 

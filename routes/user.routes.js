@@ -1,10 +1,10 @@
 import express from "express";
-import * as usuarioController from "../controllers/usuario.controllers";
+import { usuarioctrl } from "../controllers/usuario.controllers.js";
 
 const router = express.Router();
 
-router.get("/", usuarioController.indexView);
-router.get("/usuario/create", usuarioController.createView);
-router.get("/usuario/:id/edit", usuarioController.editView);
+router.get("/", (req, res) => usuarioctrl.indexView(req, res));
+router.get("/usuario/create", usuarioctrl.createView);
+router.get("/usuario/:id/edit", usuarioctrl.editView);
 
 export default router;

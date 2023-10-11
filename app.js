@@ -6,11 +6,15 @@ import helmet from "helmet";
 import path from "path";
 import { config as dotenvConfig } from "dotenv";
 import ejs from "ejs";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = process.env.PORT;
 
-import { sequelize } from "./db";
+import { sequelize } from "./db.js";
 
 sequelize
   .authenticate()
@@ -35,15 +39,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 // Views Routes
-import userRoutes from "./routes/user.routes";
-app.use("/", userRoutes); 
+import userRoutes from "./routes/user.routes.js";
+app.use("/", userRoutes);
 
-import indexRoutes from "./routes/index.routes";
+import indexRoutes from "./routes/index.routes.js";
 app.use("/", indexRoutes);
 
 // API Routes
-import apiUserRoutes from "./api/routes/user.routes";
-app.use("/api", apiUserRoutes); 
+import apiUserRoutes from "./api/routes/user.routes.js";
+app.use("/api", apiUserRoutes);
 
 app.use((_req, res, _next) => {
   res.status(404).send("Error 404");

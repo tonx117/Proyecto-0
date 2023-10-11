@@ -1,7 +1,7 @@
 import { Sequelize, Model, DataTypes } from "sequelize";
 import { config as dotenvConfig } from "dotenv";
 
-dotenvConfig(); 
+dotenvConfig();
 
 const sequelize = new Sequelize(
   process.env.MYSQLDATABASE,
