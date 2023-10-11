@@ -17,10 +17,10 @@ async function uploadFile() {
         const response = await drive.files.create({
             requestBody: {
                 name: 'primerintento.jpg', //este es el nombre con el que se guarda
-                mimeType: 'image/jpg',
+                mimeType: 'image/jpg', //para los pdf usamos application/pdf
             },
             media: {
-                mimeType: 'image/jpg',
+                mimeType: 'image/jpg', //para los pdf usamos application/pdf
                 body: fs.createReadStream(filePath),
             },
         });
