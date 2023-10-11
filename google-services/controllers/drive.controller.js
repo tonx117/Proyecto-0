@@ -12,7 +12,7 @@ export const filePath = path.join(__dirname, `../public/${nombreArchivo}`)
 
 
 //upload file
-async function uploadFile() {
+export async function uploadFile() {
     try {
         const response = await drive.files.create({
             requestBody: {
