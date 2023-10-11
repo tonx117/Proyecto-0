@@ -58,8 +58,7 @@ input[type="checkbox"] {
 #botoncheck {
   text-align: center;
 }
-
-input[type="submit"],
+z input[type="submit"],
 input[type="button"] {
   padding: 10px 20px;
   background-color: #007bff;
