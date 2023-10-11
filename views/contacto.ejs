@@ -54,6 +54,11 @@
 
     <!--==== MAIN ==== -->
     <!-- formulario de contacto en html y css -->
+    <form action="/enviar-correo" method="post">
+      <p>
+        <label for="nombre" class="colocar_nombre">Nombre <span class="obligatorio">*</span></label>
+        <input type="text" name="nombre" id="nombre" required placeholder="Escribe tu nombre" />
+      </p>
 
     <div class="contact_form">
       <div class="formulario">
@@ -140,6 +145,7 @@
           <button type="submit" name="enviar_formulario" id="enviar">
             <p>Enviar</p>
           </button>
+        </form>
 
           <p class="aviso">
             <span class="obligatorio"> * </span>los campos son obligatorios.
