@@ -1,17 +1,17 @@
+import Usuario from "../models/usuario.model.js";
 
-const usuario = require("../models/usuario.model");
 const usuarioctrl = {};
 
 usuarioctrl.index = async (_req, res) => {
   try {
-    const Usuario = await usuario.findAll();
-    if (!Usuario || Usuario.length === 0) {
+    const usuarios = await Usuario.findAll();
+    if (!usuarios || usuarios.length === 0) {
       throw {
         status: 404,
-        message: "No estas registrado aún.",
+        message: "No estás registrado aún.",
       };
     }
-    return res.json(Usuario);
+    return res.json(usuarios);
   } catch (error) {
     return res.status(error.status || 500).json({
       message: error.message || "Error interno del servidor",
@@ -23,16 +23,16 @@ usuarioctrl.show = async (req, res) => {
   const UsuarioId = req.params.id;
 
   try {
-    const Usuario = await usuario.findByPk(UsuarioId);
+    const usuario = await Usuario.findByPk(UsuarioId);
 
-    if (!Usuario) {
+    if (!usuario) {
       throw {
         status: 404,
         message: "No existe la cuenta con el id " + UsuarioId,
       };
     }
 
-    return res.json(Usuario);
+    return res.json(usuario);
   } catch (error) {
     return res
       .status(error.status || 500)
@@ -40,12 +40,11 @@ usuarioctrl.show = async (req, res) => {
   }
 };
 
-
 usuarioctrl.store = async (req, res) => {
-  const { nombre, apellido, numerotelefono, correo, contraseña } = req.body; // Asegúrate de tener el campo "apellido" en la solicitud
+  const { nombre, apellido, numerotelefono, correo, contraseña } = req.body;
 
   try {
-    const Usuario = await usuario.create({
+    const nuevoUsuario = await Usuario.create({
       nombre,
       apellido,
       numerotelefono,
@@ -53,14 +52,7 @@ usuarioctrl.store = async (req, res) => {
       contraseña,
     });
 
-    if (!Usuario) {
-      throw {
-        status: 400,
-        message: "No se pudo crear el usuario.",
-      };
-    }
-
-    return res.json(Usuario);
+    return res.json(nuevoUsuario);
   } catch (error) {
     return res
       .status(error.status || 500)
@@ -72,15 +64,21 @@ usuarioctrl.update = async (req, res) => {
   const UsuarioId = req.params.id;
   const { nombre, apellido, numerotelefono, correo, contraseña } = req.body;
   try {
-    const Usuario = await usuario.findByPk(UsuarioId);
-    await Usuario.update({
+    const usuario = await Usuario.findByPk(UsuarioId);
+    if (!usuario) {
+      throw {
+        status: 404,
+        message: "No existe la cuenta con el id " + UsuarioId,
+      };
+    }
+    await usuario.update({
       nombre,
       apellido,
       numerotelefono,
       correo,
       contraseña,
     });
-    return res.json(Usuario);
+    return res.json(usuario);
   } catch (error) {
     return res
       .status(error.status || 500)
@@ -92,14 +90,20 @@ usuarioctrl.destroy = async (req, res) => {
   const UsuarioId = req.params.id;
 
   try {
-    const cuenta = await usuario.findByPk(UsuarioId);
-    await usuario.destroy({
+    const usuario = await Usuario.findByPk(UsuarioId);
+    if (!usuario) {
+      throw {
+        status: 404,
+        message: "No existe la cuenta con el id " + UsuarioId,
+      };
+    }
+    await Usuario.destroy({
       where: {
         id: UsuarioId,
       },
     });
 
-    return res.json({ cuenta, message: "Cuenta eliminada correctamente." });
+    return res.json({ message: "Cuenta eliminada correctamente." });
   } catch (error) {
     return res
       .status(error.status || 500)
@@ -107,24 +111,23 @@ usuarioctrl.destroy = async (req, res) => {
   }
 };
 
-// login
 usuarioctrl.login = async (req, res) => {
   const { correo, contraseña } = req.body;
 
   try {
-    const Usuario = await usuario.findOne({
+    const usuario = await Usuario.findOne({
       where: {
         correo,
         contraseña,
       },
     });
 
-    if (!Usuario) {
+    if (!usuario) {
       return res.status(400).json({
         message: "Correo o contraseña incorrectos.",
       });
     }
-    res.json(Usuario);
+    res.json(usuario);
   } catch (error) {
     return res.status(500).json({
       message: error.message || "Error interno del servidor",
@@ -132,4 +135,4 @@ usuarioctrl.login = async (req, res) => {
   }
 };
 
-module.exports = usuarioctrl;
+export default usuarioctrl;

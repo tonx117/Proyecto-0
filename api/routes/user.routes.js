@@ -1,22 +1,13 @@
+import { Router } from "express";
+import usuarioctrl from "../controllers/usuario.controllers.js";
 
-const usuarioctrl = require("../controllers/usuario.controllers");
-
-const router = require("express").Router();
+const router = Router();
 
 router.get("/usuario", usuarioctrl.index);
-
-
 router.post("/usuario", usuarioctrl.store);
-
-
 router.get("/usuario/:id", usuarioctrl.show);
-
-
 router.put("/usuario/:id", usuarioctrl.update);
-
-
 router.delete("/usuario/:id", usuarioctrl.destroy);
-
 router.post("/usuario/login", usuarioctrl.login);
 
-module.exports = router;
+export default router;
