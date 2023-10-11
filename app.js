@@ -56,6 +56,7 @@ app.use((_req, res, _next) => {
 // Ruta para procesar el formulario y enviar el correo electrónico
 app.post("/enviar-correo", (req, res) => {
   const { nombre, email, telefono, website, asunto, mensaje } = req.body;
+  // La variable "email" contiene la dirección de correo electrónico proporcionada en el formulario.
 
   const mailOptions = {
     from: email,
@@ -70,10 +71,13 @@ app.post("/enviar-correo", (req, res) => {
       res.status(500).send("Error al enviar el correo");
     } else {
       console.log("Correo electrónico enviado:", info.response);
-      res.send("Correo enviado correctamente");
+      // Redirige al usuario a la página "acercade" después de enviar el correo con éxito
+      res.redirect("/acercade");
     }
   });
 });
 
 // Starting the server
-app.listen(process.env.PORT, () => console.log("Server on port: " + port));
+app.listen(process.env.PORT, () =>
+  console.log("Server on port: omaiga " + port)
+);
