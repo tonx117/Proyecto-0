@@ -10,7 +10,7 @@ require("ejs");
 const app = express();
 const port = process.env.PORT;
 
-const { sequelize } = require("./db");
+const { sequelize } = require("./db.js");
 
 sequelize
   .authenticate()
