@@ -53,31 +53,27 @@ app.use((_req, res, _next) => {
   res.status(404).send("Error 404");
 });
 
-
 // Ruta para procesar el formulario y enviar el correo electrónico
-app.post('/enviar-correo', (req, res) => {
+app.post("/enviar-correo", (req, res) => {
   const { nombre, email, telefono, website, asunto, mensaje } = req.body;
-  // La variable "email" contiene la dirección de correo electrónico proporcionada en el formulario.
 
   const mailOptions = {
     from: email,
-    to: 'diegojara88574@gmail.com',
+    to: "diegojara88574@gmail.com",
     subject: asunto,
     text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\nSitio web: ${website}\nMensaje: ${mensaje}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error('Error al enviar el correo:', error);
-      res.status(500).send('Error al enviar el correo');
+      console.error("Error al enviar el correo:", error);
+      res.status(500).send("Error al enviar el correo");
     } else {
-      console.log('Correo electrónico enviado:', info.response);
-      // Redirige al usuario a la página "acercade" después de enviar el correo con éxito
-      res.redirect('/acercade');
+      console.log("Correo electrónico enviado:", info.response);
+      res.send("Correo enviado correctamente");
     }
   });
 });
-
 
 // Starting the server
 app.listen(process.env.PORT, () => console.log("Server on port: " + port));
