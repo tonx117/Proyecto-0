@@ -55,17 +55,12 @@
     <!--==== MAIN ==== -->
     <!-- formulario de contacto en html y css -->
     <form action="/enviar-correo" method="post">
-      <p>
-        <label for="nombre" class="colocar_nombre">Nombre <span class="obligatorio">*</span></label>
-        <input type="text" name="nombre" id="nombre" required placeholder="Escribe tu nombre" />
-      </p>
-
     <div class="contact_form">
       <div class="formulario">
         <h1>Formulario de contacto</h1>
         <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
 
-        <form action="submeter-formulario.php" method="post">
+        <form action="submeter-formulario" method="post">
           <p>
             <label for="nombre" class="colocar_nombre"
               >Nombre
@@ -81,9 +76,8 @@
           </p>
 
           <p>
-            <label for="email" class="colocar_email"
-              >Email
-              <span class="obligatorio">*</span>
+            <label for="email" class="colocar_email">
+              Email <span class="obligatorio">*</span>
             </label>
             <input
               type="email"
@@ -93,6 +87,7 @@
               placeholder="Escribe tu Email"
             />
           </p>
+          
 
           <p>
             <label for="telefone" class="colocar_telefono">Teléfono </label>
