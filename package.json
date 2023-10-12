@@ -3,12 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "",
-<<<<<<< HEAD
-  "main": "index.js",
-  "type": "module",
-=======
   "main": "app.js",
->>>>>>> origin/diegoJara
   "scripts": {
     "dev": "nodemon app.js",
     "start": " node app.js",
