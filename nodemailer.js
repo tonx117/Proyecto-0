@@ -2,10 +2,11 @@ import nodemailer from "nodemailer";
 
 // Configura el transporte de Nodemailer
 const transporter = nodemailer.createTransport({
-  service: 'Gmail',
+  host: "smtp.gmail.com",
+  port: 587,
   auth: {
-    user: 'diegojara88574@gmail.com',
-    pass: 'kmvg xcms qous onvq',
+    user: process.env.EMAIL_USER, // Utiliza una variable de entorno para el correo electrónico
+    pass: process.env.EMAIL_PASSWORD, // Utiliza una variable de entorno para la contraseña
   },
 });
 
