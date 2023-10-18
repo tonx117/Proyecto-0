@@ -60,6 +60,10 @@ const Usuario = sequelize.define(
     tableName: "usuarios",
   }
 );
+<<<<<<< HEAD
 Usuario.sync({ force: true });
+=======
+usuario.sync({ force: true });
+>>>>>>> origin/natalistevenssolange
 
 export default Usuario;
