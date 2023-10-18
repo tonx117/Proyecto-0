@@ -60,6 +60,8 @@ app.use("/", indexRoutes);
 import apiUserRoutes from "./api/routes/user.routes.js";
 app.use("/api", apiUserRoutes);
 
+
+
 // PDF Routes
 import { PDFRouter } from "./google-services/routes/formularios.routes.js";
 app.use("/api", PDFRouter);
