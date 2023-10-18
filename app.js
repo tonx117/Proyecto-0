@@ -35,14 +35,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 // Views Routes
-import userRoutes from "./routes/user.routes";
+import userRoutes from "./routes/user.routes.js";
 app.use("/", userRoutes); 
 
-import indexRoutes from "./routes/index.routes";
+import indexRoutes from "./routes/index.routes.js";
 app.use("/", indexRoutes);
 
 // API Routes
-import apiUserRoutes from "./api/routes/user.routes";
+import apiUserRoutes from "./api/routes/usuario.routes.js";
 app.use("/api", apiUserRoutes); 
 
 app.use((_req, res, _next) => {

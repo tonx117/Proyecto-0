@@ -1,20 +1,32 @@
 import express from "express";
-import * as indexController from "../controllers/index.controllers";
+import { generalesview,
+metalurgiaview,
+electricidadview,
+carpinteriaview,
+acercadeview,
+checklistview,
+contactoview,
+wikiview,
+cuentaview,
+herramientasview,
+loginview,
+registerview,
+serviciosview } from "../controllers/index.controllers.js";
 
 const router = express.Router();
 
-router.get("/acercade", indexController.acercadeview);
-router.get("/servicios", indexController.serviciosview);
-router.get("/cuenta", indexController.cuentaview);
-router.get("/herramientas", indexController.herramientasview);
-router.get("/checklist", indexController.checklistview);
-router.get("/contacto", indexController.contactoview);
-router.get("/login", indexController.loginview);
-router.get("/register", indexController.registerview);
-router.get("/wiki", indexController.wikiview);
-router.get("/generales", indexController.generalesview);
-router.get("/electricidad", indexController.electricidadview);
-router.get("/carpinteria", indexController.carpinteriaview);
-router.get("/metalurgia", indexController.metalurgiaview);
+router.get("/acercade", acercadeview);
+router.get("/servicios", serviciosview);
+router.get("/cuenta", cuentaview);
+router.get("/herramientas", herramientasview);
+router.get("/checklist", checklistview);
+router.get("/contacto", contactoview);
+router.get("/login", loginview);
+router.get("/register", registerview);
+router.get("/wiki", wikiview);
+router.get("/generales", generalesview);
+router.get("/electricidad", electricidadview);
+router.get("/carpinteria", carpinteriaview);
+router.get("/metalurgia", metalurgiaview);
 
 export default router;
