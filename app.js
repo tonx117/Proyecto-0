@@ -9,6 +9,8 @@ import ejs from "ejs";
 import { fileURLToPath } from "url";
 import fileUpload from 'express-fileupload';
 
+
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -45,7 +47,7 @@ app.use(
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs')
 
 // Views Routes
 import userRoutes from "./routes/user.routes.js";
