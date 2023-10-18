@@ -1,17 +1,19 @@
 import express from "express";
-import { generalesview,
-metalurgiaview,
-electricidadview,
-carpinteriaview,
-acercadeview,
-checklistview,
-contactoview,
-wikiview,
-cuentaview,
-herramientasview,
-loginview,
-registerview,
-serviciosview } from "../controllers/index.controllers.js";
+import {
+    generalesview,
+    metalurgiaview,
+    electricidadview,
+    carpinteriaview,
+    acercadeview,
+    checklistview,
+    contactoview,
+    wikiview,
+    cuentaview,
+    herramientasview,
+    loginview,
+    registerview,
+    serviciosview,
+  } from "../controllers/index.controllers.js";
 
 const router = express.Router();
 

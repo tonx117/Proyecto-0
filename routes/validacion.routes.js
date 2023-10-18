@@ -3,9 +3,9 @@ import {
   createUserCtrl,
   getUsersCtrl,
   getUserByIdCtrl,
-} from "../controllers/user.controllers.js"; 
+} from "../controllers/usuario.controllers.js";
 import { validateSchema } from "../middleware/validacion.js";
-import { createUserSchema } from "../model/user.model.js"; 
+import { createUserSchema } from "../model/user.model.js";
 
 const userRouter = Router();
 
