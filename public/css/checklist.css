@@ -22,6 +22,12 @@ form {
   position: relative;
 }
 
+#enviogoogle{
+  border: none;
+  box-shadow: none;
+  margin-top: 10px;
+}
+
 h1 {
   text-align: center;
 }
