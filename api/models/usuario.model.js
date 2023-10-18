@@ -60,6 +60,6 @@ const Usuario = sequelize.define(
     tableName: "usuarios",
   }
 );
-usuario.sync({ force: false });
+Usuario.sync({ force: false });
 
 export default Usuario;
