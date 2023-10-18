@@ -21,9 +21,7 @@ export const ctrlCreateNewPDF = async (req, res) => {
         await newPDF.save();
         await uploadFile(PDFfile.name)
 
-        res.status(201).json({
-            message: 'PDF creado correctamente', newPDF
-        });
+        res.redirect('/checklist');
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: 'Error al crear el PDF' });
