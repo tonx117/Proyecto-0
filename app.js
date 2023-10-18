@@ -55,14 +55,16 @@ app.use("/api", apiUserRoutes);
 // });
 
 // Ruta para procesar el formulario y enviar el correo electrónico
+
 app.post("/enviar-correo", (req, res) => {
-  const { nombre, email, telefono, website, asunto, mensaje } = req.body;
+  console.log(req.body);
+  const { Nombre, Email, Telefono, Website, Asunto, Mensaje } = req.body;
 
   const mailOptions = {
-    from: email,
+    from: Email,
     to: process.env.EMAIL_USER,
-    subject: asunto,
-    text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}\nSitio web: ${website}\nMensaje: ${mensaje}`,
+    subject: Asunto,
+    text: `Nombre: ${Nombre}\nEmail: ${Email}\nTelefono: ${Telefono}\nWebsite: ${Website}\n Mensaje: ${Mensaje}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
