@@ -7,6 +7,7 @@ import path from "path";
 import { config as dotenvConfig } from "dotenv";
 import ejs from "ejs";
 import { fileURLToPath } from "url";
+import fileUpload from 'express-fileupload';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,6 +35,13 @@ app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    uriDecodeFileNames: true,
+    tempFileDir: path.join(process.cwd(), './google-services/public/'),
+  })
+);
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -49,6 +57,10 @@ app.use("/", indexRoutes);
 // API Routes
 import apiUserRoutes from "./api/routes/user.routes.js";
 app.use("/api", apiUserRoutes);
+
+// PDF Routes
+import { PDFRouter } from "./google-services/routes/formularios.routes.js";
+app.use("/api", PDFRouter);
 
 
 app.use((_req, res, _next) => {

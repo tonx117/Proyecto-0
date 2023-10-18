@@ -1,186 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Centinela</title>
-    <!--==== STYLE.CSS ==== -->
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/checklist.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    />
-    <!--==== REMIXICON CDN ==== -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <!--==== ANIMATE ON SCROLL CSS CDN ==== -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!---==== HEADER ==== -->
-    <header class="container header" id="headercheck">
-      <!--==== NAVBAR ==== -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centinela</title>
+  <!--==== STYLE.CSS ==== -->
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/checklist.css" />
+  <!--==== REMIXICON CDN ==== -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!--==== ANIMATE ON SCROLL CSS CDN ==== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
 
-      <nav class="nav">
-        <div class="logo">
-          <h2>Centinela</h2>
-        </div>
-        <div class="nav_menu" id="nav_menu">
-          <button class="close_btn" id="close_btn">
-            <i class="ri-close-fill"></i>
-          </button>
-          <ul class="nav_menu_list">
-            <li class="nav_menu_item">
-              <a href="/" class="nav_menu_link">inicio</a>
-            </li>
-            <li class="nav_menu_item">
-              <a href="/cuenta" class="nav_menu_link">cuenta</a>
-            </li>
-            <li class="nav_menu_item">
-              <a href="/servicios" class="nav_menu_link">servicios</a>
-            </li>
-            <li class="nav_menu_item">
-              <a href="/contacto" class="nav_menu_link">contacto</a>
-            </li>
-          </ul>
-        </div>
-        <button class="toggle_btn" id="toggle_btn">
-          <i class="ri-menu-line"></i>
+<body>
+  <!---==== HEADER ==== -->
+  <header class="container header" id="headercheck">
+    <!--==== NAVBAR ==== -->
+
+    <nav class="nav">
+      <div class="logo">
+        <h2>Centinela</h2>
+      </div>
+      <div class="nav_menu" id="nav_menu">
+        <button class="close_btn" id="close_btn">
+          <i class="ri-close-fill"></i>
         </button>
-      </nav>
-    </header>
+        <ul class="nav_menu_list">
+          <li class="nav_menu_item">
+            <a href="/" class="nav_menu_link">inicio</a>
+          </li>
+          <li class="nav_menu_item">
+            <a href="/cuenta" class="nav_menu_link">cuenta</a>
+          </li>
+          <li class="nav_menu_item">
+            <a href="/servicios" class="nav_menu_link">servicios</a>
+          </li>
+          <li class="nav_menu_item">
+            <a href="/contacto" class="nav_menu_link">contacto</a>
+          </li>
+        </ul>
+      </div>
+      <button class="toggle_btn" id="toggle_btn">
+        <i class="ri-menu-line"></i>
+      </button>
+    </nav>
+  </header>
 
-    <!-- - ==== HERO ==== → -->
-    <form>
-      <section>
-        <br /><br />
-        <h1>Formulario De Seguridad Institucional</h1>
-        <br /><br />
+  <!-- - ==== HERO ==== → -->
+  <form>
+    <section>
+      <br /><br />
+      <h1>Formulario De Seguridad Institucional</h1>
+      <br /><br />
 
-        <h2>Medidas de Seguridad</h2>
-        <br /><br />
-      </section>
-      <section>
-        <h3>Instalaciones Generales</h3>
-        <label
-          ><input type="checkbox" class="mycheck" /> Existen salidas de
-          emergencia claramente señalizadas.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Las salidas de emergencia
-          están libres de obstáculos.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Las puertas de emergencia
-          abren fácilmente y no están bloqueadas.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Hay un sistema de alarma
-          contra incendios instalado y funcionando.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Se realizan simulacros de
-          evacuación periódicamente.</label
-        ><br />
-        <h3>Prevención de Incendios</h3>
-        <label
-          ><input type="checkbox" class="mycheck" /> Hay extintores de incendios
-          ubicados estratégicamente.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Los extintores están en
-          buen estado y no están vencidos.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Existe un plan de respuesta
-          ante incendios y está actualizado.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Los sistemas de detección
-          de humo y alarma contra incendios funcionan correctamente.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Los enchufes y cables
-          eléctricos están en buen estado y no presentan riesgos de
-          cortocircuitos.</label
-        ><br />
-      </section>
-      <section>
-        <h3>Seguridad Física</h3>
-        <label
-          ><input type="checkbox" class="mycheck" /> Se cuenta con cámaras de
-          seguridad en lugares estratégicos.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Los accesos están
-          controlados y se utilizan tarjetas de identificación o sistemas de
-          ingreso seguros.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Se realizan revisiones
-          periódicas de las cerraduras y sistemas de seguridad.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Hay personal de seguridad
-          capacitado y disponible en caso de emergencia.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Las áreas sensibles (como
-          laboratorios o salas de cómputo) están adecuadamente
-          protegidas.</label
-        ><br />
-        <h3>Primeros Auxilios</h3>
-        <label
-          ><input type="checkbox" class="mycheck" /> Se dispone de un botiquín
-          de primeros auxilios bien equipado y accesible.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Hay personal capacitado en
-          primeros auxilios y RCP.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Los profesores y personal
-          están al tanto de los procedimientos de primeros auxilios.</label
-        ><br />
-      </section>
-      <section>
-        <h3>Otros</h3>
-        <label
-          ><input type="checkbox" class="mycheck" /> Se realizan inspecciones
-          regulares de seguridad en las instalaciones.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Los equipos de cocina y
-          calefacción están en buen estado y cumplen con las normas de
-          seguridad.</label
-        ><br />
-        <label
-          ><input type="checkbox" class="mycheck" /> Se realizan evaluaciones de
-          riesgos y se toman medidas para mitigarlos.</label
-        ><br />
-        <br />
-        <div id="botoncheck">
-          <input type="submit" value="Guardar" />
-          <input type="button" value="Imprimir" id="imprimirBtn" />
-          <input type="button" value="Descargar" />
-        </div>
-      </section>
-    </form>
+      <h2>Medidas de Seguridad</h2>
+      <br /><br />
+    </section>
+    <section>
+      <h3>Instalaciones Generales</h3>
+      <label><input type="checkbox" class="mycheck" /> Existen salidas de
+        emergencia claramente señalizadas.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Las salidas de emergencia
+        están libres de obstáculos.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Las puertas de emergencia
+        abren fácilmente y no están bloqueadas.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Hay un sistema de alarma
+        contra incendios instalado y funcionando.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Se realizan simulacros de
+        evacuación periódicamente.</label><br />
+      <h3>Prevención de Incendios</h3>
+      <label><input type="checkbox" class="mycheck" /> Hay extintores de incendios
+        ubicados estratégicamente.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Los extintores están en
+        buen estado y no están vencidos.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Existe un plan de respuesta
+        ante incendios y está actualizado.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Los sistemas de detección
+        de humo y alarma contra incendios funcionan correctamente.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Los enchufes y cables
+        eléctricos están en buen estado y no presentan riesgos de
+        cortocircuitos.</label><br />
+    </section>
+    <section>
+      <h3>Seguridad Física</h3>
+      <label><input type="checkbox" class="mycheck" /> Se cuenta con cámaras de
+        seguridad en lugares estratégicos.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Los accesos están
+        controlados y se utilizan tarjetas de identificación o sistemas de
+        ingreso seguros.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Se realizan revisiones
+        periódicas de las cerraduras y sistemas de seguridad.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Hay personal de seguridad
+        capacitado y disponible en caso de emergencia.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Las áreas sensibles (como
+        laboratorios o salas de cómputo) están adecuadamente
+        protegidas.</label><br />
+      <h3>Primeros Auxilios</h3>
+      <label><input type="checkbox" class="mycheck" /> Se dispone de un botiquín
+        de primeros auxilios bien equipado y accesible.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Hay personal capacitado en
+        primeros auxilios y RCP.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Los profesores y personal
+        están al tanto de los procedimientos de primeros auxilios.</label><br />
+    </section>
+    <section>
+      <h3>Otros</h3>
+      <label><input type="checkbox" class="mycheck" /> Se realizan inspecciones
+        regulares de seguridad en las instalaciones.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Los equipos de cocina y
+        calefacción están en buen estado y cumplen con las normas de
+        seguridad.</label><br />
+      <label><input type="checkbox" class="mycheck" /> Se realizan evaluaciones de
+        riesgos y se toman medidas para mitigarlos.</label><br />
+      <br />
+      <div id="botoncheck">
+        <input type="submit" value="Guardar" id="botonSubir">
+        <input type="button" value="Imprimir" id="imprimirBtn" />
+        <input type="button" value="Descargar" />
+      </div>
+    </section>
+  </form>
 
-    <footer></footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/checklist.imprimir.js"></script>
-    <script src="js/nav.js" defer></script>
-  </body>
+  <footer></footer>
+  <script src="js/checklist.imprimir.js"></script>
+  <!---<script src="../js/checklist.google.js"></script>--->
+  <script src="js/nav.js" defer></script>
+</body>
+
 </html>
