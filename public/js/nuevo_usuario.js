@@ -9,7 +9,7 @@ registerform.addEventListener("submit", async (e) => {
   const correo = document.querySelector("#correoregistro").value;
   const contraseña = document.querySelector("#contraseñaregistro").value;
 
-  const response = await fetch("http://localhost:4460/api/usuario ", {
+  const response = await fetch("http://localhost:4000/api/usuario ", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
