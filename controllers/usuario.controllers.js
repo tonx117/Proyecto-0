@@ -1,7 +1,6 @@
-const usuarioctrl = {};
+export const usuarioctrl = {};
 
-
-usuarioctrl.indexView = (req, res) => {
+usuarioctrl.indexView = (_req, res) => {
   res.render("index.ejs");
 };
 
@@ -19,6 +18,4 @@ usuarioctrl.editView = (req, res) => {
   res.render("edit", { id: UsuarioId });
 };
 
-
-
-module.exports = usuarioctrl;
+export default usuarioctrl;

@@ -5,13 +5,12 @@ import {
   getUserByIdCtrl,
 } from "../controllers/usuario.controllers.js";
 import { validateSchema } from "../middleware/validacion.js";
-import { createUserSchema } from "../model/usuario.model.js";
+import { createUserSchema } from "../model/user.model.js";
 
 const userRouter = Router();
 
 userRouter.get("/", getUsersCtrl);
 userRouter.get("/:id", getUserByIdCtrl);
-
 
 userRouter.post("/", createUserSchema, validateSchema, createUserCtrl);
 

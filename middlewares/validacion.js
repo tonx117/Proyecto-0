@@ -1,6 +1,5 @@
 import { validationResult } from "express-validator";
 
-// verifica si hay errores
 export const validateSchema = (req, res, next) => {
   const errors = validationResult(req);
 

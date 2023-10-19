@@ -50,7 +50,7 @@ const carpinteriaview = (_req, res) => {
   res.render("carpinteria");
 };
 
-module.exports = {
+export {
   generalesview,
   metalurgiaview,
   electricidadview,

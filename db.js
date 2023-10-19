@@ -1,6 +1,7 @@
-const { Sequelize, model, DataTypes } = require("sequelize");
+import { Sequelize, Model, DataTypes } from "sequelize";
+import { config as dotenvConfig } from "dotenv";
 
-require("dotenv").config();
+dotenvConfig();
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -8,13 +9,9 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
     port: process.env.DB_PORT,
-    dialect: "mysql",
-}
+  }
 );
 
-module.exports = {
-  sequelize,
-  model,
-  DataTypes,
-};
+export { sequelize, Model, DataTypes };
