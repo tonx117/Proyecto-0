@@ -311,7 +311,7 @@ p {
 }
 
 .intro-title{
-  color: #e22104;
+  color: #0464e2;
   margin-bottom: 15px;
   font-size: 24px;
   font-family:'Josefin Sans', sans-serif;
@@ -325,7 +325,7 @@ p {
   min-width: 100px;
   background-color: #3a414e;
   position: absolute;
-  top: 28%;
+  top: 32%;
   right: 30%;
   transform: translateY(-50%);
 }
@@ -346,7 +346,7 @@ p {
 }
 
 .buttonwiki{
-  background-color: #e22104; 
+  background-color: #0464e2; 
   border: none;
   color: white;
   padding: 15px 32px;
