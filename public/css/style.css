@@ -1,7 +1,7 @@
 /* ==== "Inter" FONT-FAMILY FROM FONTS.GOOGLE.COM ==== */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 /* FONT JOSEFINS SANS y POPPINS */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap");
 /* ==== ROOT RESET ==== */
 * {
   margin: 0 auto;
@@ -36,7 +36,6 @@ body {
 section {
   padding: 1r;
 }
-
 
 ul li {
   list-style-type: none;
@@ -252,6 +251,7 @@ p {
 /* Cambio de WRAP en pagina Cuenta */
 .wrap_cuenta {
   display: flex;
+  display: flex;
   align-items: stretch;
   justify-content: center;
   width: 100%;
@@ -266,7 +266,7 @@ p {
   justify-content: center;
 }
 
-.wrap_cuenta{
+.wrap_cuenta {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -276,28 +276,28 @@ p {
   flex-wrap: wrap;
 }
 
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.section-intro{
+.section-intro {
   padding-top: 80px;
 }
 
-.grid-columns{
+.grid-columns {
   margin: 50px;
 }
 
-.styleBox-img1{
+.styleBox-img1 {
   width: 400px;
 }
 
-.styleBox-img2{
+.styleBox-img2 {
   width: 350px;
 }
 
-.img-styleBox{
+.img-styleBox {
   position: relative;
   width: 300px; /* Ajusta el ancho y alto según tus necesidades */
   height: 200px;
@@ -314,7 +314,7 @@ p {
   color: #0464e2;
   margin-bottom: 15px;
   font-size: 24px;
-  font-family:'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
 }
 
@@ -330,13 +330,13 @@ p {
   transform: translateY(-50%);
 }
 
-.wiki-title{
+.wiki-title {
   margin-bottom: 15px;
   font-size: 50px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.paragraph-services{
+.paragraph-services {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
