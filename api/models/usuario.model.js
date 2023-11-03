@@ -1,6 +1,12 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../../db.js";
 
+// Definición de roles
+const ROLES = {
+  ADMIN: 'moderador',
+  USER: 'profesional'
+}
+
 // Modelo de Usuario
 const Usuario = sequelize.define(
   "Usuario",
@@ -37,6 +43,10 @@ const Usuario = sequelize.define(
     contraseña: {
       type: DataTypes.STRING(100),
       allowNull: false,
+    },
+    role: {
+      type: DataTypes.ENUM(ROLES.ADMIN, ROLES.USER),
+      defaultValue: ROLES.USER
     },
     createdAt: {
       type: DataTypes.DATE,
