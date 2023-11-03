@@ -120,7 +120,11 @@ usuarioctrl.login = async (req, res) => {
         message: "Correo o contraseña incorrectos.",
       });
     }
+    res.cookie("token", usuario.id, {
+      httpOnly: true,
+    });
     res.json(usuario);
+
   } catch (error) {
     return res.status(500).json({
       message: "Error interno del servidor",

@@ -5,7 +5,7 @@ export const checkUserRole = (requiredRole) => {
         
         next();
       } else {
-        
+        console.log(req.user)
         res.status(403).json({ message: 'Acceso no autorizado' });
       }
     };
